@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let prom = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                let human={
+                    name:"ajay",
+                    age:26,
+                    status:true
+                }
+                if (human.status) {
+                    res(human)
+                }
+                else{
+                    rej(human)
+                }
+            },2000)
+        })
+        prom.then((human1)=>{
+            human.wife="gangubai"
+            console.log(human);
+        })
+        prom.catch((human2)=>{
+            human.wife="not married"
+            console.log(human);
+        })
+    </script>
+</body>
+
+</html>

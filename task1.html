@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Task</title>
+</head>
+<body>
+    <p id="print"></p>
+    <button onclick="getAdd()">Add</button>
+    <button onclick="getSub()">Substract</button>
+    <button onclick="getMul()">Multiply</button>
+    <button onclick="getDiv()">Divide</button>
+    <script>
+        let num1=Number(prompt("Enter First Number"))
+        let num2=Number(prompt("Enter Second Number"))
+        let print1=document.getElementById("print")
+        function getAdd() {
+            print1.innerHTML=`Addition of ${num1} and ${num2} is ${num1+num2}`
+        }
+        function getSub() {
+            print1.innerHTML=`Substraction of ${num1} and ${num2} is ${num1-num2}`
+        }
+        function getMul() {
+            print1.innerHTML=`Multiplication of ${num1} and ${num2} is ${num1*num2}`
+        }
+        function getDiv() {
+            print1.innerHTML=`Division of ${num1} and ${num2} is ${num1/num2}`
+        }
+    </script>
+</body>
+</html>

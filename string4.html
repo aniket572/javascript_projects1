@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str1=new String("string object")
+        console.log(str1);
+        console.log(str1.length);
+
+        console.log(str1[0]);
+
+        //toUpperCase(): this method which is used to convert
+        //lowercase string into uppercase
+        console.log(str1.toUpperCase());
+
+
+        //toLowerCase(): this method which is used to convert
+        //upercase string into lowercase
+        let str2="LOWERCASE"
+        console.log(str2.toLowerCase());
+
+        //replace("exiting string","new string"):
+        let str3="mumbai to goa"
+        console.log(str3.replace("mumbai","pune"));
+        console.log(str3);
+
+        //trim()
+        let str4=" trim"
+        console.log(str4);
+        console.log(str4.trim());
+
+        let str5="trim "
+        console.log(str5);
+        console.log(str5.trim());
+
+        let str6="java script"
+        console.log(str6);
+        console.log(str6.trim());
+        console.log(str6.length);
+        console.log(str6.replace(" ",""));
+        console.log(str6.length);
+        
+
+        //trimStart()
+        let str7=" trim from start"
+        console.log(str7);
+        console.log(str7.trimStart());
+
+
+        //trimEnd()
+        let str8="trim from end "
+        console.log(str8);
+        console.log(str8.trimEnd());
+
+
+        //repeat()
+        let str9="india to usa "
+        console.log(str9);
+        console.log(str9.repeat(5));
+
+        //charAt()
+        let str10="apple"
+        console.log(str10);
+        console.log(str10.charAt(4));
+
+        //charCodeAt()
+        let str11="pineapple"
+        console.log(str11);
+        console.log(str11.charCodeAt(4));
+
+        //slice(start index,end index)
+        let str12="slice"
+        console.log(str12);
+        console.log(str12.slice(0,3));
+
+        let str13="javascript"
+        console.log(str13);
+        console.log(str13.slice(-4));
+
+        let str14="startwith"
+        console.log(str14);
+        console.log(str14.startsWith("s"));
+
+        let str15="endswith"
+        console.log(str15);
+        console.log(str15.endsWith("10")); //false
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="print"></p>
+    <button onclick="getExecute(callback)">Callback</button>
+    <script>
+        let ele=document.getElementById("print")
+        function getExecute(call) {
+            ele.innerHTML="loading....!!"
+            setTimeout(call,2000)
+        }
+        function callback() {
+            ele.innerHTML="callback function"
+        }
+    </script>
+</body>
+</html>

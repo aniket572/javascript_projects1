@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="print"></p>
+    <button onclick="starTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="reset()">Restart</button>
+    <script>
+        let ele=document.getElementById("print")
+        let timer=0;
+        let sec=0;
+        let min=0;
+        let hour=0;
+        let day=0;
+        function starTimer() {
+            timer=setInterval(()=>{
+                ele.innerHTML=`seconds ${sec++}`
+                
+                if (sec==60) {
+                    
+                    ele.innerHTML=`minutes ${min++}`
+                    ele.innerHTML=`seconds ${sec=0} ${sec++}`
+                }
+                if (min==60) {
+                    ele.innerHTML=`hours ${hour++}`
+                    ele.innerHTML=`seconds ${min=0} ${min++}`
+                }
+                if (hour==24) {
+                    ele.innerHTML=`days ${day++}`
+                    ele.innerHTML=`seconds ${hour=0} ${hour++}`
+
+                }
+            },1000)
+        }
+        function stopTimer() {
+           timer=clearInterval(timer)
+           console.log("Day "+ day + " Hour "+ hour + " Minute " + min + " Second " + sec);
+        }
+        function reset() {
+            sec=0;
+        }
+    </script>
+</body>
+</html>

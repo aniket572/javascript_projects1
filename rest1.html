@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo(n1, n2, n3, ...rest) {
+            console.log(n1);
+            console.log(n2);
+            console.log(n3);
+            console.log(rest);
+        }
+        demo(1, 2, 3, 4, 5, 6, 7, 8)
+
+        debugger
+        function player(...team) {
+            // console.log(team);
+            // console.log(...team);
+            for (const player of team) {
+                //  console.log(player);   
+                if (player[0]=="r") {
+                    console.log(player);
+                }
+            }
+        }
+        player("sachin", "rohit", "kohli", "yuvi")
+    </script>
+</body>
+
+</html>

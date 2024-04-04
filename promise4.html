@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise1=new Promise((res1,rej1)=>{
+            setTimeout(() => {
+                let mobile={
+                    company:"samsung",
+                    price:40000,
+                    make:"india",
+                    status:true
+                }
+                res1(mobile)
+                rej1()
+            }, 3000);
+        })
+        promise1.then((mobile1)=>{
+            return new Promise((res2,rej2)=>{
+                setTimeout(() => {
+                    mobile1.color="pink",
+                    mobile1.ram="12gb",
+                    mobile1.rom="128gb"
+                }, 3000);
+                res2(mobile1)
+                rej2()
+            }).then((mobile2)=>{
+                console.log(mobile2);
+            }).catch((mobile2)=>{
+                prompt("Error, Mobile not found!!");
+            })
+        }).catch((mobile1)=>{
+            prompt("Error, Mobile not found!!");
+        })
+    </script>
+</body>
+</html>
